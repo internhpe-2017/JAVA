@@ -16,6 +16,13 @@
 	</command>
 	
 	
+	<command name="checkcancel" action-class="com.infrastructure.conrollerframework.controller.Cancel" default-command="false">
+		 <accessable-roles>
+		 			<role value="public"/>
+		</accessable-roles>
+	</command>
+	
+	
 	 
 	  
 

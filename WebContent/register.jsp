@@ -1,5 +1,15 @@
 <html>
 <head>
+<script type="text/javascript">
+function fun()
+{
+	document.reg_Form.method="post";
+	document.reg_Form.action="ControllerServlet?command=checkcancel";
+	document.reg_Form.submit();
+	
+	
+	}
+</script>
 <title>Register</title>
 </head>
 <body  class="body" id="page"  topmargin='0' bottommargin='0'
@@ -96,8 +106,8 @@ leftmargin='0' rightmargin='0' marginheight='0' marginwidth='0'>
 <tr height=16>
 
 <td>
-<a  class="buttonNonUnderline"  href="index.jsp">
-Cancel</a></td>
+<!-- <a  class="buttonNonUnderline"  href="index.jsp"> -->
+<input type="submit" value="Cancel" onclick="fun()" /></td>
 
 
 </tr>
