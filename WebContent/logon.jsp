@@ -10,7 +10,15 @@ function fun()
 	document.forms[0].submit();
 }
 </SCRIPT>-->
+<SCRIPT language=JavaScript >
+function fun()
+{
 
+	document.Login_Form.method = "post";
+	document.Login_Form.action = "ControllerServlet?command=checkcancel";
+	document.Login_Form.submit();
+}
+</SCRIPT>
 <title>Login</title>
 </head>
 
@@ -82,7 +90,8 @@ Login</span></td>
 <td   align="right" valign=top><img src="../images/left.gif" width="5" height="20" border=0 alt='ss'></td>
 <td height="20" width="4"  class="buttonNonUnderline" background="../images/bg.gif" valign="middle" align="middle" nowrap  title="ss" href='#'>
 
-<input type=submit name="Login" value="Login"  onClick="javascript:fun()">
+<input type=submit name="Login" value="Login"/>
+<!--    onClick="javascript:fun()">-->
 </span></a></td>
 
 
@@ -108,8 +117,10 @@ Login</span></td>
 <td   align="right" valign=top><img src="../images/left.gif" width="5" height="20" border=0 alt='ss'></td>
 
 <td height="20" width="4"  class="buttonNonUnderline" background="../images/bg.gif" valign="middle" align="middle" nowrap  title="ss" href='#'>
-<a  class="buttonNonUnderline"  href="index.jsp"  title="Login Button"><span  class="buttonNonUnderline">
-Cancel</span></a></td>
+
+<input type="submit" value="Cancel" onclick="fun()"/>
+<!--   <a  class="buttonNonUnderline"  onclick="fun()"  title="Login Button"><span  class="buttonNonUnderline"> Cancel-->
+</span></a></td>
 
 
 <td align="left" valign=top><img src="../images/right.gif" width="5" height="20" border=0 alt='ss'></td>
