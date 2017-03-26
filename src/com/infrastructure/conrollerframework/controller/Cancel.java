@@ -1,35 +1,39 @@
-package com.infrastructure.conrollerframework.controller;
 
-import javax.servlet.ServletConfig;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+	
+	package com.infrastructure.conrollerframework.controller;
 
-import com.infrastructure.conrollerframework.data.VI;
-import com.infrastructure.exception.BaseException;
+	import javax.servlet.ServletConfig;
+	import javax.servlet.http.HttpServletRequest;
+	import javax.servlet.http.HttpServletResponse;
 
-public class Cancel extends BaseAction{
+	import com.infrastructure.conrollerframework.data.VI;
+	import com.infrastructure.exception.BaseException;
 
-	@Override
-	public VI convertRequest(HttpServletRequest request) throws BaseException {
-		System.out.println("convertRequest");
-		return null;
-	}
+	public class Cancel extends BaseAction{
 
-	@Override
-	public void actionForward(VI response, ServletConfig config,
-			HttpServletRequest servletRequest,
-			HttpServletResponse servletResponse) throws BaseException {
-		try {
-
-			System.out.println(" Action Forward Called");
-			servletRequest.setAttribute("RESPONSE_VI_ATTRIBUTE", response);
-
-			config.getServletContext().getRequestDispatcher("/welcome.jsp")
-					.forward(servletRequest, servletResponse);
-		}catch(Exception e){
-			e.printStackTrace();
+		@Override
+		public VI convertRequest(HttpServletRequest request) throws BaseException {
+			System.out.println("convertRequest");
+			return null;
 		}
-		
+
+		@Override
+		public void actionForward(VI response, ServletConfig config,
+				HttpServletRequest servletRequest,
+				HttpServletResponse servletResponse) throws BaseException {
+			try {
+
+				System.out.println(" Action Forward Called");
+				servletRequest.setAttribute("RESPONSE_VI_ATTRIBUTE", response);
+
+				config.getServletContext().getRequestDispatcher("/welcome.jsp")
+						.forward(servletRequest, servletResponse);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+			
+		}
+
 	}
 
-}
+
