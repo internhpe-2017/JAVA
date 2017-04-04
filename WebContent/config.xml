@@ -22,6 +22,12 @@
 		</accessable-roles>
 	</command>
 	
+	<command name="checkregforward" action-class="com.infrastructure.conrollerframework.controller.Register_forward" default-command="false">
+		 <accessable-roles>
+		 			<role value="public"/>
+		</accessable-roles>
+	</command>
+	
 	
 	 
 	  

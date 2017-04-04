@@ -1,6 +1,7 @@
 
 package com.infrastructure.conrollerframework.controller;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 import javax.servlet.ServletConfig;
@@ -44,7 +45,7 @@ public abstract class BaseAction {
 	 *                com.infrastructure.common.exception.BusinessException for
 	 *                more detailes
 	 */
-	public HttpResponseProxy executeRequest(HttpRequestProxy request) throws BaseException {
+	public HttpResponseProxy executeRequest(HttpRequestProxy request) throws BaseException,IOException {
 		return null;
 	}
 
@@ -124,6 +125,11 @@ public abstract class BaseAction {
 			HttpServletResponse servletResponse) throws InfrastructureException {
 	}
 
+	public void nds()
+	{
+	
+	}
+	
 	/**
 	 * The static method to do the jndi lookup and get the home interface and
 	 * create the EJB Object

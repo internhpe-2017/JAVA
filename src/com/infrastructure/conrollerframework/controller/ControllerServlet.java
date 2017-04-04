@@ -141,6 +141,17 @@ public class ControllerServlet extends javax.servlet.http.HttpServlet {
 	 *
 	 * @exception None
 	 */
+	
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	    System.out.println("testing");
+		String name = request.getParameter("j_name");
+	    System.out.println(name);
+	    
+	}
+	
+	
 	public void init(javax.servlet.ServletConfig config) throws ServletException {
 		super.init(config);
 		

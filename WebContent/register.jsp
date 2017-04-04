@@ -9,6 +9,14 @@ function fun()
 	
 	
 	}
+	
+function fun1()
+{
+	document.reg_Form.method="post";
+	document.reg_Form.action="ControllerServlet?command=checkregforward";
+	document.reg_Form.submit();
+	} 
+	
 </script>
 <title>Register</title>
 </head>
@@ -16,7 +24,7 @@ function fun()
 leftmargin='0' rightmargin='0' marginheight='0' marginwidth='0'>
 
 
-<form name='reg_Form' action="" method="post">
+<form name='reg_Form'>
 
 <table id="layoutwhite"  height='100%' width='100%' align='center' cellspacing='0' cellpadding='0' border='0'>
 <tr><td valign='middle'>
@@ -77,7 +85,7 @@ leftmargin='0' rightmargin='0' marginheight='0' marginwidth='0'>
 <td>
 <p align="right" span class="runtext2table">Gender</td><td></td>
 <td>
-<input type=text name="j_sex" size='40'  ></td>
+<input type=text name="j_gen" size='40'  ></td>
 </tr>
 
 
@@ -93,7 +101,7 @@ leftmargin='0' rightmargin='0' marginheight='0' marginwidth='0'>
 <table border=0 cellspacing=0 cellpadding=0 name='Login_Button_0'>
 <tr height=16>
 <td height="20" width="4"  class="buttonNonUnderline" valign="middle" align="middle" nowrap  title="ss" href='#'>
-<input type=submit name="Register" value="Register"  onClick="">
+<input type=submit name="Register" value="Register"  onClick="fun1()">
 </a></td>
 </tr>
 </table>

@@ -1,15 +1,18 @@
 <html>
 
 <head>
-<!--  <SCRIPT language=JavaScript >
-function fun()
+<SCRIPT language=JavaScript >
+function fun1()
 {
 
-	document.forms[0].method = "post";
-	document.forms[0].action = "/commonlogin/j_security_check";
-	document.forms[0].submit();
+	document.Login_Form.method = "post";
+	document.Login_Form.action = "sample\src\com\infrastructure\conrollerframework\controller\Register_forward.java";
+	document.Login_Form.submit();
 }
-</SCRIPT>-->
+
+
+
+</SCRIPT>
 
 <title>Login</title>
 </head>
@@ -49,10 +52,10 @@ Login</span></td>
 <table align='center' cellspacing='0' cellpadding='0' border='0' height="90">
 <tr>
 <td>
-<p align="right" span class="runtext2table">User Name</td><td></td>
+<p align="right" span class="runtext2table">Name</td><td></td>
 <td>
 
-<input type=text name="j_username" size='40'  ></td>
+<input type=text name="j_name" size='40'  ></td>
 </tr>
 <tr>
 <td scope="row" align='right'>
@@ -82,7 +85,7 @@ Login</span></td>
 <td   align="right" valign=top><img src="../images/left.gif" width="5" height="20" border=0 alt='ss'></td>
 <td height="20" width="4"  class="buttonNonUnderline" background="../images/bg.gif" valign="middle" align="middle" nowrap  title="ss" href='#'>
 
-<input type=submit name="Login" value="Login"  onClick="">
+<input type=submit name="Login" value="Login"  onClick="fun1()">
 </span></a></td>
 
 
